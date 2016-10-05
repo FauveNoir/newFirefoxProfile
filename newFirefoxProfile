@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Récupérer nom du profile
+echo -n "Nom du profile : "
+read NAMEOFPROFILE
+
+firefox -P -CreateProfile "$NAMEOFPROFILE"
+
+echo "#!/bin/sh
+# Script created by newFirefoxProfile at `date -I`.
+
+firefox -new-instance -P $NAMEOFPROFILE" > ~/.local/bin/bro${NAMEOFPROFILE}
+
+chmod +x ~/.local/bin/bro${NAMEOFPROFILE}
