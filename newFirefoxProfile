@@ -1,8 +1,12 @@
 #!/bin/sh
 
 # Récupérer nom du profile
-echo -n "Nom du profile : "
-read NAMEOFPROFILE
+if [ -z $1 ]; then
+	echo -n "Nom du profile : "
+	read NAMEOFPROFILE
+else
+	NAMEOFPROFILE=$1
+fi
 
 firefox -P -CreateProfile "$NAMEOFPROFILE"
 
