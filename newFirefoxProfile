@@ -13,6 +13,6 @@ firefox -P -CreateProfile "$NAMEOFPROFILE"
 echo "#!/bin/sh
 # Script created by newFirefoxProfile at `date -I`.
 
-firefox -new-instance -P $NAMEOFPROFILE" > ~/.local/bin/bros${NAMEOFPROFILE}
+firefox -new-instance -P $NAMEOFPROFILE" > ~/.local/bin/brow${NAMEOFPROFILE}
 
-chmod +x ~/.local/bin/bros${NAMEOFPROFILE}
+chmod +x ~/.local/bin/brow${NAMEOFPROFILE}
